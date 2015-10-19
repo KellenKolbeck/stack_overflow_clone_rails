@@ -17,11 +17,13 @@ class QuestionsController < ApplicationController
       redirect_to questions_path
     else
       render :new
+    end
   end
 
-  # def edit
-  #
-  # end
+  def edit
+    @question = Question.find(params[:question_id])
+    @answer = @question.answers.find(params[:id])
+  end
   #
   # def update
   #

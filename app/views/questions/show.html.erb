@@ -1,0 +1,9 @@
+<%= @question.question_content %>
+<br>
+<ul>
+<% @question.answers.each do |answer| %>
+  <li><%= answer.answer_content %></li>
+<% end %>
+</ul>
+
+<%= link_to "Add an answer", new_question_answer_path(@question) %>
