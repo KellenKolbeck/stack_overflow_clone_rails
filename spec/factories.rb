@@ -14,6 +14,6 @@ FactoryGirl.define do
     user_name("cat")
     email("cat@cat.com")
     password("cat")
-    confirm_password("cat")
+    password_confirmation("cat")
   end
 end
