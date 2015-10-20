@@ -51,6 +51,7 @@ group :development do
   gem 'quiet_assets'
 
   gem 'hirb'
+  gem 'letter_opener'
 end
 
 group :test do
