@@ -1,8 +1,14 @@
 <%= @question.question_content %>
 <br>
 <ul>
-<% @question.answers.each do |answer| %>
-  <li><%= link_to answer.answer_content, edit_question_answer_path(@question, answer) %></li>
+<% @question.answers.order(up_vote: :desc).each do |answer| %>
+  <li>
+    <%= link_to answer.answer_content, edit_question_answer_path(@question, answer) %>
+    <%= link_to "▲", question_answer_path(@question, answer, vote: "up"), data: {method: "patch"} %>
+    <%= link_to "▼", question_answer_path(@question, answer, vote: "down"), data: {method: "patch"} %>
+    - Upvotes: <%= answer.up_vote %>
+    - Downvotes: <%= answer.down_vote %>
+  </li>
 <% end %>
 </ul>
 <%= link_to "Update", edit_question_path(@question)  %>
