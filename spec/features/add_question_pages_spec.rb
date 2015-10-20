@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 describe "the add a question process" do
   it "adds a new question" do
     login_user
@@ -11,13 +12,13 @@ describe "the add a question process" do
 
 
 
-  def login_user
-    visit root_path
-    click_link "Sign Up"
-    fill_in "User name", with: "cat"
-    fill_in "Email", with: "cat@cat.com"
-    fill_in "Password", with: "cat"
-    fill_in "Password confirmation", with: "cat"
-    click_on "Sign up"
-  end
+  # def login_user
+  #   visit root_path
+  #   click_link "Sign Up"
+  #   fill_in "User name", with: "cat"
+  #   fill_in "Email", with: "cat@cat.com"
+  #   fill_in "Password", with: "cat"
+  #   fill_in "Password confirmation", with: "cat"
+  #   click_on "Sign up"
+  # end
 end
