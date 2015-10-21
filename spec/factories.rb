@@ -7,7 +7,7 @@ FactoryGirl.define do
     answer_content("I am fine.")
     up_vote(0)
     down_vote(0)
-    user_id(nil)
+    question
   end
 
   factory(:user) do
